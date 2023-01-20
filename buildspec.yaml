@@ -20,3 +20,4 @@ phases:
       - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI/$IMAGE_APP_NAME:$IMAGE_TAG
       - docker push $REPOSITORY_URI/$IMAGE_NGINX_NAME:$IMAGE_TAG
+      - helm upgrade -i myappv1 /helm/components/app -f ./helm/components/app/values.yaml
